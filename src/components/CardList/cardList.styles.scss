@@ -1,0 +1,73 @@
+.card {
+  ul {
+    background-color: #fff;
+    border-bottom: 1px solid #bdbdbd;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    font-size: 14px;
+    align-items: center;
+    margin: 0;
+
+    li {
+      flex: 1;
+      color: rgba(0, 0, 0, 0.65);
+      span {
+        color: rgba(0, 0, 0, 0.45);
+        font-size: 12px;
+      }
+
+      .btn-status {
+        background: #f5f5f5;
+        padding: 3px;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+      }
+    }
+
+    & :nth-last-child() {
+      position: relative;
+    }
+  }
+
+  .icon-dots {
+    cursor: pointer;
+  }
+
+  .tooltip.true {
+    position: absolute;
+    background: #fff;
+    padding: 5px 35px 5px 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    z-index: 99;
+
+    div {
+      padding: 5px 35px 5px 5px;
+      cursor: pointer;
+    }
+  }
+
+  .tooltip.false {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .manager,
+    .btn-status {
+      display: none;
+    }
+    .dots {
+      position: absolute;
+      right: 20px;
+    }
+    ul {
+      flex-direction: column;
+      align-items: start;
+    }
+    .tooltip {
+      width: 105px;
+      right: 0;
+    }
+  }
+}
